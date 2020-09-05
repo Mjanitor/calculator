@@ -98,6 +98,8 @@ for (let i = 9; i >= -6; i--) {
                         if (currentSymbol === "") {
                             currentSymbol = "+";
                             oldNum = currentNumber;
+                        } else if (currentSymbol && equalsPressed) {
+                            oldNum = currentNumber;
                         } else {
                             oldNum = operate(currentSymbol, oldNum, currentNumber);
                         }
@@ -110,6 +112,8 @@ for (let i = 9; i >= -6; i--) {
                     case '-':
                         if (currentSymbol === "") {
                             currentSymbol = "-";
+                            oldNum = currentNumber;
+                        } else if (currentSymbol && equalsPressed) {
                             oldNum = currentNumber;
                         } else {
                             oldNum = operate(currentSymbol, oldNum, currentNumber);
@@ -125,6 +129,8 @@ for (let i = 9; i >= -6; i--) {
                         if (currentSymbol === "") {
                             currentSymbol = "*";
                             oldNum = currentNumber;
+                        } else if (currentSymbol && equalsPressed) {
+                            oldNum = currentNumber;
                         } else {
                             oldNum = operate(currentSymbol, oldNum, currentNumber);
                         }
@@ -138,6 +144,8 @@ for (let i = 9; i >= -6; i--) {
                     case '/':
                         if (currentSymbol === "") {
                             currentSymbol = "/";
+                            oldNum = currentNumber;
+                        } else if (currentSymbol && equalsPressed) {
                             oldNum = currentNumber;
                         } else {
                             oldNum = operate(currentSymbol, oldNum, currentNumber);
