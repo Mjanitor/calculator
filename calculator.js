@@ -199,11 +199,12 @@ function multiply(a, b) {
 }
 
 function divide(a, b) {
-    if (b === 0) {
-        return "You can't divide by 0 ya goofy";
-    }
     result = Number(a) / Number(b);
-    output.textContent = result;
+    if (isNaN(result) || !(isFinite(result))) {
+        output.textContent = "You can't divide by 0."
+    } else {
+        output.textContent = result;
+    }
     return result;
 }
 
